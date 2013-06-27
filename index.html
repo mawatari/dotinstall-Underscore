@@ -8,26 +8,21 @@
 <script type="text/javascript" src="assets/lib/underscore-min.js"></script>
 <script type="text/javascript">
 	(function() {
-//		var a = [1, 2, 5, 8, 42, 12];
+//		var a = [1, 2, 5];
+//		var b = [5, 2, 8];
 		var x;
 
-		// groupBy: 集合要素を演算結果に基づいてグループ化する
-//		x = _.groupBy(a, function(num) {
-//			return num % 3;
-//		});
+		// union: 和集合（どちらかに属している要素を抽出）
+//		x = _.union(a, b);
 
-		// countBy: 集合要素を演算結果に基づいてグループ化し、個数を返す
-//		x = _.countBy(a, function(num) {
-//			return num % 2 == 0 ? 'even' : 'odd';
-//		});
+		// intersection: 積集合（共通部分のみ抽出）
+//		x = _.intersection(a, b);
 
-		// sortBy: 集合要素を演算結果に基づいて並び替える
-//		x = _.sortBy(a, function(num) {
-//			return Math.sin(num);
-//		});
+		// difference: 差集合（bにはないaの要素）
+//		x = _.difference(a, b);
 
-		// オブジェクトのプロパティでソートした例
-		x = _.sortBy(["me", "i", "and"], 'length');
+		// uniq: 配列から重複する者を取り除く
+		x = _.uniq([2, 5, 2, 10, 5]);
 
 		console.log(x);
 	})();
