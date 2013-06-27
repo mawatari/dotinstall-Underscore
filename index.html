@@ -8,35 +8,18 @@
 <script type="text/javascript" src="assets/lib/underscore-min.js"></script>
 <script type="text/javascript">
 	(function() {
-//		var x;
+		var x;
+		var a = [2, 5 ,10, 8];
 
-		// range: 指定した範囲（第1引数以上、第2引数未満）の配列を生成する
-//		x = _.range(1, 11);
+		// chain: ラップされたオブジェクトを返す
+		x = _.chain(a)
+				.shuffle()
+				.map(function(num) {
+					return num * 2
+				})
+				.value();
 
-		// 第1引数を省略した場合は0から
-//		x = _.range(11);
-
-		// 第3引数はステップをとる。以下の場合は2飛び
-//		x = _.range(1, 11, 2);
-
-		// random: 乱数を生成する（第1引数以上、第2引数以下）
-//		x = _.random(10);
-//		x = _.random(3, 10);
-
-		// escape: HTML Escape
-//		x = _.escape('<script>');
-
-		// times: 指定回数分繰り返す
-//		_.times(5, function() {
-//			console.log(_.random(10));
-//		});
-
-		// Ruby風の書き方
-		_(5).times(function() {
-			console.log(_.random(10));
-		});
-
-//		console.log(x);
+		console.log(x);
 	})();
 </script>
 </body>
