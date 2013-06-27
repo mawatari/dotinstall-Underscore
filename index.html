@@ -8,38 +8,35 @@
 <script type="text/javascript" src="assets/lib/underscore-min.js"></script>
 <script type="text/javascript">
 	(function() {
-		var x;
-		var user = {
-			name: 'tabuchi',
-			score: 80,
-			web: 'http://dotinstall.com/'
-		};
+//		var x;
 
-		// keys: オブジェクトのキーを得る
-//		x = _.keys(user);
+		// range: 指定した範囲（第1引数以上、第2引数未満）の配列を生成する
+//		x = _.range(1, 11);
 
-		// values: オブジェクトのバリューを得る
-//		x = _.values(user);
+		// 第1引数を省略した場合は0から
+//		x = _.range(11);
 
-		// invert: オブジェクトのキーとバリューを入れ替える
-//		x = _.invert(user);
+		// 第3引数はステップをとる。以下の場合は2飛び
+//		x = _.range(1, 11, 2);
 
-		// has: オブジェクトにキーが含まれるか
-//		x = _.has(user, "name");
+		// random: 乱数を生成する（第1引数以上、第2引数以下）
+//		x = _.random(10);
+//		x = _.random(3, 10);
 
-		// isEmpty: Emptyであるか（バリアント型変数が初期化されていない状態、数値はtrue）
-//		x = _.isEmpty(user.score);
+		// escape: HTML Escape
+//		x = _.escape('<script>');
 
-		// isString: 文字列であるか
-//		x = _.isString(user.score);
+		// times: 指定回数分繰り返す
+//		_.times(5, function() {
+//			console.log(_.random(10));
+//		});
 
-		// isNull: Nullであるか
-//		x = _.isNull(user.score);
+		// Ruby風の書き方
+		_(5).times(function() {
+			console.log(_.random(10));
+		});
 
-		// isNumber: 数値であるか
-		x = _.isNumber(user.score);
-
-		console.log(x);
+//		console.log(x);
 	})();
 </script>
 </body>
