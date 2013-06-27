@@ -9,15 +9,21 @@
 <script type="text/javascript">
 	(function() {
 		var x;
-		var a = [2, 5 ,10, 8];
+		var user = {
+			name: 'taguchi',
+			score: 50,
+			web: 'http://dotinstall.com/'
+		};
 
-		// chain: ラップされたオブジェクトを返す
-		x = _.chain(a)
-				.shuffle()
-				.map(function(num) {
-					return num * 2
-				})
-				.value();
+		// <%- %> HTML Escape
+//		var tpl = "<li><%- name %> (<%- score %>)</li>";
+
+		// <%= %> HTML Escape なし
+
+		// <% %> JavaScriptを実行
+		var tpl = "<% alert('hello') %>";
+
+		x = _.template(tpl, user);
 
 		console.log(x);
 	})();
