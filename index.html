@@ -8,24 +8,28 @@
 <script type="text/javascript" src="assets/lib/underscore-min.js"></script>
 <script type="text/javascript">
 	(function() {
-		var a = [2, 5, 8, 42, 12];
-//		var x;
+//		var a = [1, 2, 5, 8, 42, 12];
+		var x;
 
-		// find: 集合要素から条件にあう最初のものを返す
-//		x = _.find(a, function(num) {
-//			return num > 5;
+		// groupBy: 集合要素を演算結果に基づいてグループ化する
+//		x = _.groupBy(a, function(num) {
+//			return num % 3;
 //		});
 
-		// filter: 集合要素から条件に合うものを全て返す
-//		x = _.filter(a, function(num) {
-//			return num > 5;
+		// countBy: 集合要素を演算結果に基づいてグループ化し、個数を返す
+//		x = _.countBy(a, function(num) {
+//			return num % 2 == 0 ? 'even' : 'odd';
 //		});
 
-//		console.log(x);
+		// sortBy: 集合要素を演算結果に基づいて並び替える
+//		x = _.sortBy(a, function(num) {
+//			return Math.sin(num);
+//		});
 
-		// contains: 集合要素に条件に合うものがあるかないか
-		console.log(_.contains(a, 10));
-		console.log(_.contains(a, 5));
+		// オブジェクトのプロパティでソートした例
+		x = _.sortBy(["me", "i", "and"], 'length');
+
+		console.log(x);
 	})();
 </script>
 </body>
